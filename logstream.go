@@ -45,8 +45,8 @@ func (s *LogStream) Init() error {
 
 func (s *LogStream) createStream() error {
 	params := &cloudwatchlogs.CreateLogStreamInput{
-		LogGroupName:  s.group,
-		LogStreamName: s.stream,
+		LogGroupName:  s.Group,
+		LogStreamName: s.Stream,
 	}
 
 	_, err := s.service.CreateLogStream(params)
